@@ -12,6 +12,7 @@ public class F1 extends Car {
         newSpeed = getCurrentSpeed()+rate;
         if(newSpeed == 0){
             setGears(1);
+            stop();
         }else if(newSpeed>=1 && newSpeed<=50){
             setGears(1);
         }else if(newSpeed>=51 && newSpeed<=100){
@@ -35,10 +36,10 @@ public class F1 extends Car {
          * speed more than 250: gear 6
          */
 
-        if(newSpeed == 0) {
-            //Stop the car, set gear as 1
-            setGears(1);
-        }
+//        if(newSpeed == 0) {
+//            //Stop the car, set gear as 1
+//            setGears(1);
+//        }
         //for all other cases, change the gear accordingly
 
         if(newSpeed > 0) {
